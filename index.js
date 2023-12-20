@@ -29,6 +29,7 @@ function init() {
     ])
     .then(function (userInput) {
       const shapesTemplate = generateLogo(userInput);
+
       fs.writeFile("logo.svg", shapesTemplate, function (error) {
         error
           ? console.log("An error has taken place.")
