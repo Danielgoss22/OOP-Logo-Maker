@@ -12,6 +12,11 @@ function init() {
       },
       {
         type: "input",
+        message: "What color would you like your Initials to be?",
+        name: "textColor",
+      },
+      {
+        type: "input",
         message: "What Color would you like your custom logo to be?",
         name: "color",
       },
