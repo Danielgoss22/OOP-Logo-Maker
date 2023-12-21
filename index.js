@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateLogo = require("./lib/shapes");
+const { Circle, Square, Triangle } = require("./lib/shapes");
 
 function init() {
   inquirer
@@ -29,6 +29,7 @@ function init() {
     ])
     .then(function (userInput) {
       const shapesTemplate = generateLogo(userInput);
+
       fs.writeFile("logo.svg", shapesTemplate, function (error) {
         error
           ? console.log("An error has taken place.")
@@ -36,4 +37,21 @@ function init() {
       });
     });
 }
+function generateLogo(data) {
+  console.log(data);
+  if (data.shape === "Circle") {
+    const shapeLogo = new Circle(data.color, data.initials, data.textColor);
+    const template = shapeLogo.render();
+    return template;
+  } else if (data.shape === "Square") {
+    const shapeLogo = new Square(data.color, data.initials, data.textColor);
+    const template = shapeLogo.render();
+    return template;
+  } else if (data.shape === "Triangle") {
+    const shapeLogo = new Triangle(data.color, data.initials, data.textColor);
+    const template = shapeLogo.render();
+    return template;
+  }
+}
+
 init();
