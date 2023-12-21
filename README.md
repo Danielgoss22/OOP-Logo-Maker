@@ -9,3 +9,5 @@
 -I am grateful to the tutor I used, Juan Delgado, because he was helpful in putting me on the right path with how to parse through the SVG docs, I was looking in the wrong places and he helped me to better understand where I needed to look to get the right data and syntax.
 
 ## Walkthrough Video
+
+https://drive.google.com/file/d/1GssQ44fbU8nOTayn5dw2_ntOjVsmhLCi/view
